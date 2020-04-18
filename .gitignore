@@ -2,3 +2,6 @@ credentials.json
 .DS_Store
 .idea
 cookies.pkl
+.venv/
+screenshot_retry_*.png
+.vscode
