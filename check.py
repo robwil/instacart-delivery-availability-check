@@ -27,6 +27,8 @@ def login():
         cookies = pickle.load(f)
         print("Cookies found! Using cookies to log in.")
         for cookie in cookies:
+            if 'expiry' in cookie:
+                del cookie['expiry']
             driver.add_cookie(cookie)
         go_to(INSTACART_BASE_URL)
     except IOError:
